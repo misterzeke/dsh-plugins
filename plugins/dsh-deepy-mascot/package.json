@@ -1,0 +1,32 @@
+{
+  "name": "dsh-deepy-mascot",
+  "version": "1.0.0",
+  "description": "输入框上沿的宠物小鲸鱼 Deepy —— 把 dsh-claude-style 的 mascot 配置封装成可安装的 DSH 组合包。",
+  "type": "module",
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "overlay.cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.2-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "dsh-claude-style": "0.20.2"
+  }
+}

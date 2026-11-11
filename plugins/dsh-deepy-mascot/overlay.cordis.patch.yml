@@ -1,0 +1,17 @@
+# 备用配置：目标机已经安装并启用了 dsh-claude-style 时用这个。
+#
+# dsh-claude-style 作为组合包启用时，它自己的 patch 会插入 ui-skin-claude-style 行；
+# 此时再把 cordis.patch.yml 里的 `- insert:` 粘进去会撞 id。
+# 改用下面这条「按 id 覆盖配置」的条目，追加到
+# <DSH_HOME>/profiles/<profile>/cordis.patch.yml 即可。
+
+- id: ui-skin-claude-style
+  config:
+    brand: deepseek
+    palette: host
+    typeface: host
+    mascot: deepy
+    mascotScope: all
+    sidebarBrand: true
+    sodium: on
+    banLocale: en

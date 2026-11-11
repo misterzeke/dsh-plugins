@@ -1,0 +1,28 @@
+# dsh-deepy-mascot —— 输入框上沿的宠物小鲸鱼 Deepy
+#
+# 鲸鱼不是独立插件，而是 dsh-claude-style 的 mascot（`mascot: deepy`）。
+# 本 patch 把该皮肤行插入 profile，并固定成下面这份配置。
+#
+# 配置项说明见 README.md；下面这组值是原机器
+# ~/.dsh/profiles/desktop/cordis.patch.yml 中 ui-skin-claude-style 条目的原样抽取。
+
+- insert:
+    - id: ui-skin-claude-style
+      name: dsh-claude-style
+      config:
+        # 品牌：deepseek = DeepSeek 品牌，claude = Claude 品牌
+        brand: deepseek
+        # 配色：host = 跟随宿主（保持 DSH 原生配色），claude = Claude 配色
+        palette: host
+        # 字体：host = 跟随宿主，claude = Claude 字体，system = 系统字体
+        typeface: host
+        # 输入框上沿的宠物：deepy = 小鲸鱼 Deepy，brand = 跟随品牌，crab = 螃蟹，whalegirl = 鲸鱼娘，off = 关闭
+        mascot: deepy
+        # 出现范围：all = 首页 + 对话页，home = 仅首页
+        mascotScope: all
+        # 侧栏是否绘制品牌区域
+        sidebarBrand: true
+        # 钠（Sodium）渲染引擎：on / off / undecided
+        sodium: on
+        # 界面语言限制：en / zh / off
+        banLocale: en
